@@ -1,4 +1,4 @@
-id,class,available_hours,speed_per_hour
+_id,class,available_hours,speed_per_hour
 ae4cbcbb-0fad-11e3-a533-b614f2bbba79,Хроматограф жидкостный,,85
 a66ab733-6e68-11e4-80be-00505692e771,Шейкер-CO2-инкубатор,,75
 c6ee32ea-abaf-11e1-818a-b614f2bbba79,Хроматограф жидкостный,,55
