@@ -71,7 +71,7 @@ for order in orderCollection.find({'deadline_date': {'$gte': start_date}}, sort=
         else:
             startTime = prevEquipTask['finish']
         tmp = divmod(order['amount'], suitableEquipment[1])
-        countHour = tmp[0] + 1 if tmp[1] > 0 else 0
+        countHour = tmp[0] + (1 if tmp[1] > 0 else 0)
         if (datetime_by_adding_business_hour(startTime, countHour) <= order['deadline_date']):
             reservationEqCollection.insert_one(
                 {'equipment_id': suitableEquipment[0], 'order_id': order['_id'], 'amount': order['amount'],
