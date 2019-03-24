@@ -60,8 +60,6 @@ for order in orderCollection.find({'deadline_date': {'$gte': start_date}}, sort=
                                                      equipmentCollection.find(
                                                          {'class': {'$in': product['equipment_class']}},
                                                          sort=[('speed_per_hour', -1)])))
-    bestEquip = None
-    finished_time = order['deadline']
     for suitableEquipment in suitableEquipmentIdSpeedPairOrderedBy:
         prevEquipTask = reservationEqCollection.find_one(
             {'equipment_id': suitableEquipment[0]},
